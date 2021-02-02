@@ -1,0 +1,17 @@
+commit f3787866f184baa12e2c0ed91e3de795a26544b6
+Author: Valerii Nikolskiy <pheanixs@gmail.com>
+Date:   Tue Feb 2 10:51:33 2021 +0200
+
+    add description file readme.md for all repository
+
+commit 27f12a3616d690928169974a764b756afb31e59a
+Author: Valerii Nikolskiy <pheanixs@gmail.com>
+Date:   Tue Feb 2 10:46:15 2021 +0200
+
+    add task1/status.txt
+
+commit 5c1232feb365bd8b4cb075403e544fbf76a1cd19
+Author: Valerii Nikolskiy <pheanixs@gmail.com>
+Date:   Tue Feb 2 10:34:11 2021 +0200
+
+    add .gitignore
