@@ -1,0 +1,6 @@
+# File contents .gitignore for IDEA
+*.iml
+.idea/
+delete.txt
+# .DS_Store
+# out/
