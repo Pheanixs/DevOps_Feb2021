@@ -1,0 +1,170 @@
+Pheanix@TARDIS MINGW64 /d/Projects/DevOps_Feb2021
+$ git init
+Initialized empty Git repository in D:/Projects/DevOps_Feb2021/.git/
+
+Pheanix@TARDIS MINGW64 /d/Projects/DevOps_Feb2021 (master)
+$ git config --global user.email "pheanixs@gmail.com"
+
+Pheanix@TARDIS MINGW64 /d/Projects/DevOps_Feb2021 (master)
+$ git config --global user.name "Valerii Nikolskiy"
+
+Pheanix@TARDIS MINGW64 /d/Projects/DevOps_Feb2021 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .idea/.gitignore
+        new file:   .idea/description.html
+        new file:   .idea/misc.xml
+        new file:   .idea/modules.xml
+        new file:   .idea/project-template.xml
+        new file:   .idea/vcs.xml
+        new file:   DevOps_Feb2021.iml
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .idea/misc.xml
+        modified:   .idea/modules.xml
+        modified:   .idea/vcs.xml
+        modified:   DevOps_Feb2021.iml
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .idea/encodings.xml
+        src/
+
+
+
+Pheanix@TARDIS MINGW64 /d/Projects/DevOps_Feb2021 (master)
+$ git status > task1/status.txt
+
+Pheanix@TARDIS MINGW64 /d/Projects/DevOps_Feb2021 (master)
+$ touch.exe .gitignore
+
+Pheanix@TARDIS MINGW64 /d/Projects/DevOps_Feb2021 (master)
+$ git add .gitignore
+
+Pheanix@TARDIS MINGW64 /d/Projects/DevOps_Feb2021 (master)
+$ git commit -m "add .gitignore"
+[master (root-commit) 5c1232f] add .gitignore
+ 8 files changed, 52 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 .idea/.gitignore
+ create mode 100644 .idea/description.html
+ create mode 100644 .idea/misc.xml
+ create mode 100644 .idea/modules.xml
+ create mode 100644 .idea/project-template.xml
+ create mode 100644 .idea/vcs.xml
+ create mode 100644 DevOps_Feb2021.iml
+ 
+
+Pheanix@TARDIS MINGW64 /d/Projects/DevOps_Feb2021 (master)
+$ git status >> task1/status.txt
+
+Pheanix@TARDIS MINGW64 /d/Projects/DevOps_Feb2021 (master)
+$ git add task1/status.txt
+
+Pheanix@TARDIS MINGW64 /d/Projects/DevOps_Feb2021 (master)
+$ git commit -m "add task1/status.txt"
+[master 27f12a3] add task1/status.txt
+ 1 file changed, 45 insertions(+)
+ create mode 100644 task1/status.txt
+
+
+Pheanix@TARDIS MINGW64 /d/Projects/DevOps_Feb2021 (master)
+$ git add readme.md
+
+Pheanix@TARDIS MINGW64 /d/Projects/DevOps_Feb2021 (master)
+$ git commit -m "add readme.md for all repository"
+[master 1dec96f] add readme.md for all repository
+ 1 file changed, 6 insertions(+)
+ create mode 100644 readme.md
+
+
+Pheanix@TARDIS MINGW64 /d/Projects/DevOps_Feb2021 (master)
+$ git commit --amend
+[master f378786] add description file readme.md for all repository
+ Date: Tue Feb 2 10:51:33 2021 +0200
+ 1 file changed, 6 insertions(+)
+ create mode 100644 readme.md
+
+
+Pheanix@TARDIS MINGW64 /d/Projects/DevOps_Feb2021 (master)
+$ git revert f3787866f184baa12e2c0ed91e3de795a26544b6
+Removing readme.md
+[master eace79a] Revert "add navi file readme.md for all repository"
+ 1 file changed, 6 deletions(-)
+ delete mode 100644 readme.md
+
+
+Pheanix@TARDIS MINGW64 /d/Projects/DevOps_Feb2021 (master)
+$ git log
+commit eace79a9337cb08ddd75f0d6667772938be00ec6 (HEAD -> master)
+Author: Valerii Nikolskiy <pheanixs@gmail.com>
+Date:   Tue Feb 2 11:06:28 2021 +0200
+
+    Revert "add navi file readme.md for all repository"
+
+    This reverts commit f3787866f184baa12e2c0ed91e3de795a26544b6.
+
+commit f3787866f184baa12e2c0ed91e3de795a26544b6
+Author: Valerii Nikolskiy <pheanixs@gmail.com>
+Date:   Tue Feb 2 10:51:33 2021 +0200
+
+    add description file readme.md for all repository
+
+commit 27f12a3616d690928169974a764b756afb31e59a
+Author: Valerii Nikolskiy <pheanixs@gmail.com>
+Date:   Tue Feb 2 10:46:15 2021 +0200
+
+    add task1/status.txt
+
+commit 5c1232feb365bd8b4cb075403e544fbf76a1cd19
+Author: Valerii Nikolskiy <pheanixs@gmail.com>
+Date:   Tue Feb 2 10:34:11 2021 +0200
+
+    add .gitignore
+
+
+Pheanix@TARDIS MINGW64 /d/Projects/DevOps_Feb2021 (master)
+$ git reset --soft f3787866f184baa12e2c0ed91e3de795a26544b6
+
+Pheanix@TARDIS MINGW64 /d/Projects/DevOps_Feb2021 (master)
+$ git log
+commit f3787866f184baa12e2c0ed91e3de795a26544b6 (HEAD -> master)
+Author: Valerii Nikolskiy <pheanixs@gmail.com>
+Date:   Tue Feb 2 10:51:33 2021 +0200
+
+    add description file readme.md for all repository
+
+commit 27f12a3616d690928169974a764b756afb31e59a
+Author: Valerii Nikolskiy <pheanixs@gmail.com>
+Date:   Tue Feb 2 10:46:15 2021 +0200
+
+    add task1/status.txt
+
+commit 5c1232feb365bd8b4cb075403e544fbf76a1cd19
+Author: Valerii Nikolskiy <pheanixs@gmail.com>
+Date:   Tue Feb 2 10:34:11 2021 +0200
+
+    add .gitignore
+
+
+Pheanix@TARDIS MINGW64 /d/Projects/DevOps_Feb2021 (master)
+$ git remote add origin https://github.com/Pheanixs/DevOps_Feb2021
+
+Pheanix@TARDIS MINGW64 /d/Projects/DevOps_Feb2021 (master)
+$ git push origin master
+Enumerating objects: 22, done.
+Counting objects: 100% (22/22), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (20/20), done.
+Writing objects: 100% (22/22), 3.14 KiB | 357.00 KiB/s, done.
+Total 22 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/Pheanixs/DevOps_Feb2021
+ * [new branch]      master -> master
