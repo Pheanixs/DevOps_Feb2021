@@ -47,8 +47,8 @@ Login to Docker Hub
 - `sudo docker push pheanix/nginx-web:v2`
 
 Results:
-![task23_000.png](https://github.com/Pheanixs/DevOps_Feb2021/blob/master/task2/images/task23_000.png)
-![task23_001.png](https://github.com/Pheanixs/DevOps_Feb2021/blob/master/task2/images/task23_001.png)
+![task23_000.png](https://github.com/Pheanixs/DevOps_Feb2021/blob/master/task2/images/task23_000.PNG)
+![task23_001.png](https://github.com/Pheanixs/DevOps_Feb2021/blob/master/task2/images/task23_001.PNG)
 
 ### Task 2.5
 
@@ -61,7 +61,7 @@ List created images `sudo docker-compose images` in file (task2/cmd_t25a.txt).
 List status `sudo docker-compose ps` in file (task2/cmd_t25b).
 
 Results:
-![task25_000.png](https://github.com/Pheanixs/DevOps_Feb2021/blob/master/task2/images/task25_000.png)
-![task25_001.png](https://github.com/Pheanixs/DevOps_Feb2021/blob/master/task2/images/task25_001.png)
+![task25_000.png](https://github.com/Pheanixs/DevOps_Feb2021/blob/master/task2/images/task25_000.PNG)
+![task25_001.png](https://github.com/Pheanixs/DevOps_Feb2021/blob/master/task2/images/task25_000.PNG)
 
 
