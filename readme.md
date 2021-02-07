@@ -6,3 +6,6 @@
 
 ### Task 2. Work with Docker
 #### [Task 2](https://github.com/Pheanixs/DevOps_Feb2021/tree/master/task2 "Task 2")
+
+### Task 3. Ansible for beginners
+#### [Task 3](https://github.com/Pheanixs/DevOps_Feb2021/tree/master/task3 "Task 3")

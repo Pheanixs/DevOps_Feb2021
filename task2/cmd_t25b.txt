@@ -1,0 +1,7 @@
+pheanix@usrv18045:~/task2$ sudo docker-compose ps
+     Name                    Command               State           Ports
+---------------------------------------------------------------------------------
+task2_adminer_1   entrypoint.sh docker-php-e ...   Up      0.0.0.0:9996->8080/tcp
+task2_db_1        docker-entrypoint.sh --def ...   Up      3306/tcp, 33060/tcp
+task2_ghost_1     docker-entrypoint.sh node  ...   Up      0.0.0.0:8080->2368/tcp
+task2_web_1       /docker-entrypoint.sh ngin ...   Up      0.0.0.0:9998->80/tcp
