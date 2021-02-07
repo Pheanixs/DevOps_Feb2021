@@ -62,6 +62,6 @@ List status `sudo docker-compose ps` in file (task2/cmd_t25b).
 
 Results:
 ![task25_000.png](https://github.com/Pheanixs/DevOps_Feb2021/blob/master/task2/images/task25_000.PNG)
-![task25_001.png](https://github.com/Pheanixs/DevOps_Feb2021/blob/master/task2/images/task25_000.PNG)
+![task25_001.png](https://github.com/Pheanixs/DevOps_Feb2021/blob/master/task2/images/task25_001.PNG)
 
 
