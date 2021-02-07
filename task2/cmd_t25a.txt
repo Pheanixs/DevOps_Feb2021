@@ -1,0 +1,7 @@
+pheanix@usrv18045:~/task2$ sudo docker-compose images
+   Container         Repository         Tag        Image Id       Size
+------------------------------------------------------------------------
+task2_adminer_1   adminer             latest     f9660cc24897   89.72 MB
+task2_db_1        mysql               latest     c8562eaf9d81   546.1 MB
+task2_ghost_1     ghost               3-alpine   1a2d328ac5bc   379.2 MB
+task2_web_1       pheanix/nginx-web   v2         deb12f085219   133 MB

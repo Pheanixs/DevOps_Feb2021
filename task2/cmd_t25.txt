@@ -1,0 +1,158 @@
+pheanix@usrv18045:~/task2$ sudo docker-compose up
+Building with native build. Learn about native build in Compose here: https://docs.docker.com/go/compose-native-build/
+Removing task2_ghost_1
+Recreating task2_adminer_1 ...
+task2_web_1 is up-to-date
+Recreating task2_adminer_1            ... done
+Recreating 0ae27250ee3c_task2_ghost_1 ... done
+Attaching to task2_web_1, task2_db_1, task2_ghost_1, task2_adminer_1
+db_1       | 2021-02-07 16:48:57+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.23-1debian10 started.
+db_1       | 2021-02-07 16:48:58+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+db_1       | 2021-02-07 16:48:58+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.23-1debian10 started.
+db_1       | 2021-02-07 16:48:59+00:00 [Note] [Entrypoint]: Initializing database files
+db_1       | 2021-02-07T16:48:59.253563Z 0 [System] [MY-013169] [Server] /usr/sbin/mysqld (mysqld 8.0.23) initializing of server in progress as process 43
+db_1       | 2021-02-07T16:48:59.313648Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+db_1       | 2021-02-07T16:49:01.830811Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+db_1       | 2021-02-07T16:49:06.935882Z 6 [Warning] [MY-010453] [Server] root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.
+db_1       | 2021-02-07 16:49:17+00:00 [Note] [Entrypoint]: Database files initialized
+db_1       | 2021-02-07 16:49:17+00:00 [Note] [Entrypoint]: Starting temporary server
+db_1       | 2021-02-07T16:49:19.121074Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.23) starting as process 88
+db_1       | 2021-02-07T16:49:19.572198Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+db_1       | 2021-02-07T16:49:23.829359Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+adminer_1  | [Sun Feb  7 16:53:17 2021] PHP 7.4.15 Development Server (http://[::]:8080) started
+db_1       | 2021-02-07T16:49:25.113274Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Socket: /var/run/mysqld/mysqlx.sock
+db_1       | 2021-02-07T16:49:26.824087Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+db_1       | 2021-02-07T16:49:26.825163Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+db_1       | 2021-02-07T16:49:26.830409Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+db_1       | 2021-02-07T16:49:26.896898Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.23'  socket: '/var/run/mysqld/mysqld.sock'  port: 0  MySQL Community Server - GPL.
+db_1       | 2021-02-07 16:49:26+00:00 [Note] [Entrypoint]: Temporary server started.
+db_1       | Warning: Unable to load '/usr/share/zoneinfo/iso3166.tab' as time zone. Skipping it.
+web_1      | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+web_1      | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+web_1      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+db_1       | Warning: Unable to load '/usr/share/zoneinfo/leap-seconds.list' as time zone. Skipping it.
+db_1       | Warning: Unable to load '/usr/share/zoneinfo/zone.tab' as time zone. Skipping it.
+db_1       | Warning: Unable to load '/usr/share/zoneinfo/zone1970.tab' as time zone. Skipping it.
+db_1       |
+db_1       | 2021-02-07 16:49:41+00:00 [Note] [Entrypoint]: Stopping temporary server
+db_1       | 2021-02-07T16:49:41.036771Z 10 [System] [MY-013172] [Server] Received SHUTDOWN from user root. Shutting down mysqld (Version: 8.0.23).
+db_1       | 2021-02-07T16:49:43.477265Z 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.23)  MySQL Community Server - GPL.
+db_1       | 2021-02-07 16:49:44+00:00 [Note] [Entrypoint]: Temporary server stopped
+db_1       |
+db_1       | 2021-02-07 16:49:44+00:00 [Note] [Entrypoint]: MySQL init process done. Ready for start up.
+web_1      | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+web_1      | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+web_1      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+web_1      | /docker-entrypoint.sh: Configuration complete; ready for start up
+db_1       |
+db_1       | 2021-02-07T16:49:44.512338Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.23) starting as process 1
+db_1       | 2021-02-07T16:49:44.546902Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+db_1       | 2021-02-07T16:49:45.125269Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+db_1       | 2021-02-07T16:49:45.562595Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+db_1       | 2021-02-07T16:49:45.809169Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+db_1       | 2021-02-07T16:49:45.810284Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+db_1       | 2021-02-07T16:49:45.819012Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+db_1       | 2021-02-07T16:49:45.892681Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.23'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+ghost_1    | [2021-02-07 16:53:25] INFO Creating table: posts
+ghost_1    | [2021-02-07 16:53:26] INFO Creating table: posts_meta
+ghost_1    | [2021-02-07 16:53:27] INFO Creating table: users
+ghost_1    | [2021-02-07 16:53:27] INFO Creating table: posts_authors
+ghost_1    | [2021-02-07 16:53:28] INFO Creating table: roles
+ghost_1    | [2021-02-07 16:53:28] INFO Creating table: roles_users
+ghost_1    | [2021-02-07 16:53:29] INFO Creating table: permissions
+ghost_1    | [2021-02-07 16:53:29] INFO Creating table: permissions_users
+ghost_1    | [2021-02-07 16:53:29] INFO Creating table: permissions_roles
+ghost_1    | [2021-02-07 16:53:29] INFO Creating table: permissions_apps
+ghost_1    | [2021-02-07 16:53:30] INFO Creating table: settings
+ghost_1    | [2021-02-07 16:53:30] INFO Creating table: tags
+ghost_1    | [2021-02-07 16:53:30] INFO Creating table: posts_tags
+ghost_1    | [2021-02-07 16:53:31] INFO Creating table: apps
+ghost_1    | [2021-02-07 16:53:31] INFO Creating table: app_settings
+ghost_1    | [2021-02-07 16:53:32] INFO Creating table: app_fields
+ghost_1    | [2021-02-07 16:53:33] INFO Creating table: invites
+ghost_1    | [2021-02-07 16:53:33] INFO Creating table: brute
+ghost_1    | [2021-02-07 16:53:33] INFO Creating table: webhooks
+ghost_1    | [2021-02-07 16:53:33] INFO Creating table: sessions
+ghost_1    | [2021-02-07 16:53:34] INFO Creating table: integrations
+ghost_1    | [2021-02-07 16:53:34] INFO Creating table: api_keys
+ghost_1    | [2021-02-07 16:53:34] INFO Creating table: mobiledoc_revisions
+ghost_1    | [2021-02-07 16:53:35] INFO Creating table: members
+ghost_1    | [2021-02-07 16:53:35] INFO Creating table: labels
+ghost_1    | [2021-02-07 16:53:36] INFO Creating table: members_labels
+ghost_1    | [2021-02-07 16:53:36] INFO Creating table: members_stripe_customers
+ghost_1    | [2021-02-07 16:53:37] INFO Creating table: members_stripe_customers_subscriptions
+ghost_1    | [2021-02-07 16:53:38] INFO Creating table: actions
+ghost_1    | [2021-02-07 16:53:38] INFO Creating table: emails
+ghost_1    | [2021-02-07 16:53:38] INFO Creating table: email_batches
+ghost_1    | [2021-02-07 16:53:39] INFO Creating table: email_recipients
+ghost_1    | [2021-02-07 16:53:40] INFO Creating table: tokens
+ghost_1    | [2021-02-07 16:53:40] INFO Creating table: snippets
+ghost_1    | [2021-02-07 16:53:41] INFO Model: Tag
+ghost_1    | [2021-02-07 16:53:41] INFO Model: Role
+ghost_1    | [2021-02-07 16:53:41] INFO Model: Permission
+ghost_1    | [2021-02-07 16:53:42] INFO Model: User
+ghost_1    | [2021-02-07 16:53:59] INFO Model: Post
+ghost_1    | [2021-02-07 16:54:00] INFO Model: Integration
+ghost_1    | [2021-02-07 16:54:00] INFO Relation: Role to Permission
+db_1       | mbind: Operation not permitted
+ghost_1    | [2021-02-07 16:54:02] INFO Relation: Post to Tag
+ghost_1    | [2021-02-07 16:54:02] INFO Relation: User to Role
+db_1       | mbind: Operation not permitted
+ghost_1    | [2021-02-07 16:54:14] INFO Ghost is running in production...
+ghost_1    | [2021-02-07 16:54:14] INFO Your site is now available on http://192.168.77.105:9997/
+ghost_1    | [2021-02-07 16:54:14] INFO Ctrl+C to shut down
+ghost_1    | [2021-02-07 16:54:14] INFO Ghost boot 56.891s
+adminer_1  | [Sun Feb  7 16:55:21 2021] [::ffff:192.168.77.109]:62066 Accepted
+adminer_1  | [Sun Feb  7 16:55:21 2021] [::ffff:192.168.77.109]:62067 Accepted
+adminer_1  | [Sun Feb  7 16:55:22 2021] [::ffff:192.168.77.109]:62066 [200]: GET /
+adminer_1  | [Sun Feb  7 16:55:22 2021] [::ffff:192.168.77.109]:62066 Closing
+adminer_1  | [Sun Feb  7 16:55:22 2021] [::ffff:192.168.77.109]:62068 Accepted
+adminer_1  | [Sun Feb  7 16:55:22 2021] [::ffff:192.168.77.109]:62068 [200]: GET /?file=functions.js&version=4.7.8
+adminer_1  | [Sun Feb  7 16:55:22 2021] [::ffff:192.168.77.109]:62068 Closing
+adminer_1  | [Sun Feb  7 16:55:22 2021] [::ffff:192.168.77.109]:62067 [200]: GET /?file=default.css&version=4.7.8
+adminer_1  | [Sun Feb  7 16:55:22 2021] [::ffff:192.168.77.109]:62067 Closing
+adminer_1  | [Sun Feb  7 16:55:24 2021] [::ffff:192.168.77.109]:62074 Accepted
+adminer_1  | [Sun Feb  7 16:55:24 2021] [::ffff:192.168.77.109]:62074 [200]: POST /?script=version
+adminer_1  | [Sun Feb  7 16:55:24 2021] [::ffff:192.168.77.109]:62074 Closing
+adminer_1  | [Sun Feb  7 16:55:24 2021] [::ffff:192.168.77.109]:62075 Accepted
+adminer_1  | [Sun Feb  7 16:55:24 2021] [::ffff:192.168.77.109]:62075 [200]: GET /?file=favicon.ico&version=4.7.8
+adminer_1  | [Sun Feb  7 16:55:24 2021] [::ffff:192.168.77.109]:62075 Closing
+adminer_1  | [Sun Feb  7 16:55:42 2021] [::ffff:192.168.77.109]:62076 Accepted
+adminer_1  | [Sun Feb  7 16:55:42 2021] [::ffff:192.168.77.109]:62077 Accepted
+adminer_1  | [Sun Feb  7 16:55:42 2021] [::ffff:192.168.77.109]:62076 [302]: POST /
+adminer_1  | [Sun Feb  7 16:55:42 2021] [::ffff:192.168.77.109]:62076 Closing
+db_1       | mbind: Operation not permitted
+adminer_1  | [Sun Feb  7 16:55:42 2021] [::ffff:192.168.77.109]:62077 [200]: GET /?server=db&username=root
+adminer_1  | [Sun Feb  7 16:55:42 2021] [::ffff:192.168.77.109]:62077 Closing
+adminer_1  | [Sun Feb  7 16:55:42 2021] [::ffff:192.168.77.109]:62078 Accepted
+adminer_1  | [Sun Feb  7 16:55:43 2021] [::ffff:192.168.77.109]:62078 [200]: GET /?file=jush.js&version=4.7.8
+adminer_1  | [Sun Feb  7 16:55:43 2021] [::ffff:192.168.77.109]:62078 Closing
+db_1       | mbind: Operation not permitted
+db_1       | mbind: Operation not permitted
+ghost_1    | [2021-02-07 17:08:27] INFO "GET /" 200 2368ms
+ghost_1    | [2021-02-07 17:08:28] INFO "GET /assets/built/screen.css?v=4e6fa49079" 200 56ms
+ghost_1    | [2021-02-07 17:08:28] INFO "GET /assets/built/casper.js?v=4e6fa49079" 200 16ms
+ghost_1    | [2021-02-07 17:08:28] INFO "GET /favicon.ico" 200 11ms
+adminer_1  | [Sun Feb  7 17:09:29 2021] [::ffff:192.168.77.109]:62127 Accepted
+adminer_1  | [Sun Feb  7 17:09:29 2021] [::ffff:192.168.77.109]:62128 Accepted
+adminer_1  | [Sun Feb  7 17:09:29 2021] [::ffff:192.168.77.109]:62127 [200]: GET /
+adminer_1  | [Sun Feb  7 17:09:29 2021] [::ffff:192.168.77.109]:62127 Closing
+adminer_1  | [Sun Feb  7 17:10:23 2021] [::ffff:192.168.77.109]:62132 Accepted
+adminer_1  | [Sun Feb  7 17:10:23 2021] [::ffff:192.168.77.109]:62128 [302]: POST /
+adminer_1  | [Sun Feb  7 17:10:23 2021] [::ffff:192.168.77.109]:62128 Closing
+db_1       | mbind: Operation not permitted
+adminer_1  | [Sun Feb  7 17:10:23 2021] [::ffff:192.168.77.109]:62132 [200]: GET /?server=db&username=root
+adminer_1  | [Sun Feb  7 17:10:23 2021] [::ffff:192.168.77.109]:62132 Closing
+adminer_1  | [Sun Feb  7 17:10:29 2021] [::ffff:192.168.77.109]:62134 Accepted
+adminer_1  | [Sun Feb  7 17:10:29 2021] [::ffff:192.168.77.109]:62135 Accepted
+db_1       | mbind: Operation not permitted
+adminer_1  | [Sun Feb  7 17:10:29 2021] [::ffff:192.168.77.109]:62134 [200]: GET /?server=db&username=root&db=ghost
+adminer_1  | [Sun Feb  7 17:10:29 2021] [::ffff:192.168.77.109]:62134 Closing
+adminer_1  | [Sun Feb  7 17:10:30 2021] [::ffff:192.168.77.109]:62135 [200]: GET /?server=db&username=root&db=ghost&script=db
+adminer_1  | [Sun Feb  7 17:10:30 2021] [::ffff:192.168.77.109]:62135 Closing
+adminer_1  | [Sun Feb  7 17:10:34 2021] [::ffff:192.168.77.109]:62136 Accepted
+adminer_1  | [Sun Feb  7 17:10:34 2021] [::ffff:192.168.77.109]:62137 Accepted
+db_1       | mbind: Operation not permitted
+adminer_1  | [Sun Feb  7 17:10:34 2021] [::ffff:192.168.77.109]:62136 [200]: GET /?server=db&username=root&db=
+adminer_1  | [Sun Feb  7 17:10:34 2021] [::ffff:192.168.77.109]:62136 Closing
+

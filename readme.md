@@ -1,5 +1,8 @@
-# DevOps_online_Vinnitsa_2020Q3Q4
+# DevOps_online_Feb2021
 
 
 ### Task 1. Work with Git/GitHub
 #### [Task 1](https://github.com/Pheanixs/DevOps_Feb2021/tree/master/task1 "Task 1")
+
+### Task 2. Work with Docker
+#### [Task 2](https://github.com/Pheanixs/DevOps_Feb2021/tree/master/task2 "Task 2")

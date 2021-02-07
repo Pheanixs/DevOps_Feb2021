@@ -1,0 +1,22 @@
+pheanix@usrv18045:~/task2$ sudo docker build -t pheanix/nginx-web:v2 .
+Sending build context to Docker daemon  4.608kB
+Step 1/5 : FROM nginx:1.19.6
+ ---> f6d0b4767a6c
+Step 2/5 : MAINTAINER Valerii Nikolskyi <pheanixs@gmail.com>
+ ---> Using cache
+ ---> 8bf66084b58a
+Step 3/5 : ARG DEVOPS=Pheanix
+ ---> Using cache
+ ---> 8b7d5974a0df
+Step 4/5 : ENV DEVOPS $DEVOPS
+ ---> Using cache
+ ---> b6dc3af09f1b
+Step 5/5 : COPY ./html/index.html /usr/share/nginx/html
+ ---> Using cache
+ ---> deb12f085219
+Successfully built deb12f085219
+Successfully tagged pheanix/nginx-web:v2
+
+
+pheanix@usrv18045:~/task2$ sudo docker run -d -p 9998:80 pheanix/nginx-web:v2
+dc47dc2cebfae9bdead6ddd11cce70c249b2bc671a5f1d82dbefdaaefef79426
