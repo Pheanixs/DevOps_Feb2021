@@ -8,8 +8,8 @@ Start read documentation about docker from (https://doc.docker.com)
 
 ### Task 2.1
 
-Install Docker use virtual machine (VM Virtual Box) on os Ubuntu 18.04.5 Server LTS
-Listing commands on file (task2/cmd_inst_lin_docker.txt)
+Install Docker and Docker Compose use virtual machine (VM Virtual Box) on os Ubuntu 18.04.5 Server LTS
+Listing commands on file (task2/cmd_inst_docker.txt)
 
 Install Docker on Windows 10 Pro x64. 
 ![win_docker_001.png](https://github.com/Pheanixs/DevOps_Feb2021/blob/master/task2/images/win_docker_001.png)
@@ -30,7 +30,7 @@ how run (https://docs.docker.com/engine/reference/commandline/container_run/) an
 Download image nginx. Create Docker file (task2/t2.2/Dockerfile). Create simple html page (task2/html/index.html).
 Run command in bush. Command and result in file (task2/cmd_nginx.txt)
 
-Run internet browser and check web-server (my local http://192.168.77.105:9998)
+Run internet browser and check web-server (my local http://192.168.77.100:9998)
 
 ![task22_000.png](https://github.com/Pheanixs/DevOps_Feb2021/blob/master/task2/images/task22_000.png)
 
@@ -42,13 +42,10 @@ Command and result in file (task2/cmd_t23.txt)
 
 ### Task 2.4
 
-Login to Docker Hub
-- `sudo docker login`
-- `sudo docker push pheanix/nginx-web:v2`
+Command and result in file (task2/cmd_t24.txt)
 
 Results:
-![task23_000.png](https://github.com/Pheanixs/DevOps_Feb2021/blob/master/task2/images/task23_000.PNG)
-![task23_001.png](https://github.com/Pheanixs/DevOps_Feb2021/blob/master/task2/images/task23_001.PNG)
+![task24_000.png](https://github.com/Pheanixs/DevOps_Feb2021/blob/master/task2/images/task2_00.png)
 
 ### Task 2.5
 

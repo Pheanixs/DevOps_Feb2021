@@ -1,22 +1,37 @@
-pheanix@usrv18045:~/task2$ sudo docker build -t pheanix/nginx-web:v2 .
-Sending build context to Docker daemon  4.608kB
+pheanix@userv00:~/task2$ cat Dockerfile
+FROM nginx:1.19.6
+
+MAINTAINER Valerii Nikolskyi <pheanixs@gmail.com>
+
+# Give ARG DEVOPS a dafault value = Pheanix
+ARG DEVOPS=Pheanix
+
+# Assign the $DEVOPS arg to the DEVOPS ENV so that it can be accessed
+# by the subsequent RUN call within the container
+ENV DEVOPS $DEVOPS
+
+COPY ./html/index.html /usr/share/nginx/html
+pheanix@userv00:~/task2$ sudo docker build -t simple-nginx2 .
+Sending build context to Docker daemon  3.584kB
 Step 1/5 : FROM nginx:1.19.6
- ---> f6d0b4767a6c
+ ---> 298ec0e28760
 Step 2/5 : MAINTAINER Valerii Nikolskyi <pheanixs@gmail.com>
- ---> Using cache
- ---> 8bf66084b58a
+ ---> Running in 6df8d9b5627c
+Removing intermediate container 6df8d9b5627c
+ ---> b9ff31a33e1c
 Step 3/5 : ARG DEVOPS=Pheanix
- ---> Using cache
- ---> 8b7d5974a0df
+ ---> Running in 018ab1f5c2b0
+Removing intermediate container 018ab1f5c2b0
+ ---> af6e7c3ba6be
 Step 4/5 : ENV DEVOPS $DEVOPS
- ---> Using cache
- ---> b6dc3af09f1b
+ ---> Running in 9fd3cfa27412
+Removing intermediate container 9fd3cfa27412
+ ---> a8ec52beadf5
 Step 5/5 : COPY ./html/index.html /usr/share/nginx/html
- ---> Using cache
- ---> deb12f085219
-Successfully built deb12f085219
-Successfully tagged pheanix/nginx-web:v2
+ ---> 08405862a2ea
+Successfully built 08405862a2ea
+Successfully tagged simple-nginx2:latest
 
 
-pheanix@usrv18045:~/task2$ sudo docker run -d -p 9998:80 pheanix/nginx-web:v2
-dc47dc2cebfae9bdead6ddd11cce70c249b2bc671a5f1d82dbefdaaefef79426
+pheanix@userv00:~/task2$ sudo docker run -d -p 9998:80 simple-nginx2
+c9ff784467ab03d4a015b7dd05463d248a2d95cc9fec47bc5936bf1ce415fd8d

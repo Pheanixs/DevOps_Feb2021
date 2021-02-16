@@ -1,0 +1,36 @@
+pheanix@userv00:~/task2$ sudo docker login
+Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
+Username: pheanix
+Password:
+WARNING! Your password will be stored unencrypted in /home/pheanix/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+
+pheanix@userv00:~/task2$ sudo docker images
+REPOSITORY      TAG       IMAGE ID       CREATED          SIZE
+simple-nginx2   latest    08405862a2ea   4 minutes ago    133MB
+simple-nginx    latest    d3fb08f2c826   15 minutes ago   133MB
+nginx           1.19.6    298ec0e28760   7 days ago       133MB
+hello-world     latest    bf756fb1ae65   13 months ago    13.3kB
+
+pheanix@userv00:~/task2$ sudo docker commit 0851a92cbc59  pheanix/simple-nginx
+sha256:810762aecdd25db3375044763956ff6a1b7331968756eadb4a10c1a5429ca258
+
+pheanix@userv00:~/task2$ sudo docker push pheanix/simple-nginx
+Using default tag: latest
+The push refers to repository [docker.io/pheanix/simple-nginx]
+b7634b4d2510: Pushed
+a19d03d5090c: Pushed
+d9eb91d66e2a: Pushed
+ae1f545e4c08: Pushed
+c20672db3628: Pushed
+4cbb728cd302: Pushed
+9eb82f04c782: Pushed
+latest: digest: sha256:bccdf9093ffb200084ae2319c35e9deb817c4cf5b7158022bcfae484b7f670f3 size: 1776
+
+pheanix@userv00:~/task2$ sudo docker commit c9ff784467ab pheanix/simple-nginx2
+sha256:09dfb832cdc9b736f92588bf2d582a5a882e0afed532361e8d280cd8e85948ba
+
+

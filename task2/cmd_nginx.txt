@@ -1,15 +1,25 @@
-pheanix@usrv18045:~/task2$ sudo docker build -t nginx-web:v1 .
+pheanix@userv00:~/task2$ sudo docker build -t simple-nginx .
 Sending build context to Docker daemon  3.584kB
 Step 1/2 : FROM nginx:1.19.6
 1.19.6: Pulling from library/nginx
-Digest: sha256:10b8cc432d56da8b61b070f4c7d2543a9ed17c2b23010b43af434fd40e2ca4aa
+45b42c59be33: Pull complete
+d0d9e9ea897e: Pull complete
+66e650438339: Pull complete
+76a3dfe4406b: Pull complete
+410ff9d97480: Pull complete
+Digest: sha256:8e10956422503824ebb599f37c26a90fe70541942687f70bbdb744530fc9eba4
 Status: Downloaded newer image for nginx:1.19.6
- ---> f6d0b4767a6c
+ ---> 298ec0e28760
 Step 2/2 : COPY ./html/index.html /usr/share/nginx/html
- ---> 4b8955158815
-Successfully built 4b8955158815
-Successfully tagged nginx-web:v1
+ ---> d3fb08f2c826
+Successfully built d3fb08f2c826
+Successfully tagged simple-nginx:latest
 
+pheanix@userv00:~/task2$ sudo docker images
+REPOSITORY     TAG       IMAGE ID       CREATED         SIZE
+simple-nginx   latest    d3fb08f2c826   9 seconds ago   133MB
+nginx          1.19.6    298ec0e28760   7 days ago      133MB
+hello-world    latest    bf756fb1ae65   13 months ago   13.3kB
 
-pheanix@usrv18045:~/task2$ sudo docker run -d -p 9998:80 nginx-web:v1
-9c599d9705da270a74f53ba3492b43c81ccdbf40c2eb1428632c8decc6a0f8b4
+pheanix@userv00:~/task2$ sudo docker run -d -p 9998:80 simple-nginx
+0851a92cbc59abf4c37a2fe4be43b96ce1edcaf394c413de91be9fc2e2f4249d
