@@ -45,20 +45,16 @@ Command and result in file (task2/cmd_t23.txt)
 Command and result in file (task2/cmd_t24.txt)
 
 Results:
-![task24_000.png](https://github.com/Pheanixs/DevOps_Feb2021/blob/master/task2/images/task2_00.png)
+![task24_000.png](https://github.com/Pheanixs/DevOps_Feb2021/blob/master/task2/images/task24_000.png)
 
 ### Task 2.5
 
 Create `docker-compose.yaml` file (task2/t2.5/docker-compose.yaml).
 
-List outputs messages after running command `sudo doc up -d` in file (task2/cmd_t25.txt).
-
-List created images `sudo docker-compose images` in file (task2/cmd_t25a.txt).
-
-List status `sudo docker-compose ps` in file (task2/cmd_t25b).
+Command and result in file (task2/cmd_t25.txt)
 
 Results:
-![task25_000.png](https://github.com/Pheanixs/DevOps_Feb2021/blob/master/task2/images/task25_000.PNG)
-![task25_001.png](https://github.com/Pheanixs/DevOps_Feb2021/blob/master/task2/images/task25_001.PNG)
+![task25_000.png](https://github.com/Pheanixs/DevOps_Feb2021/blob/master/task2/images/task25_000.png)
+![task25_001.png](https://github.com/Pheanixs/DevOps_Feb2021/blob/master/task2/images/task25_001.png)
 
 
