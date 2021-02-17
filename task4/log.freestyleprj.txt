@@ -1,7 +1,0 @@
-12:17:34 Started by user Pheanix Skywalker
-12:17:34 Running as SYSTEM
-12:17:34 Building on master in workspace /var/jenkins_home/workspace/CurrTime
-12:17:34 [CurrTime] $ /bin/sh -xe /tmp/jenkins3859345832626514351.sh
-12:17:34 + date
-12:17:34 Sun 14 Feb 2021 10:17:34 AM UTC
-12:17:34 Finished: SUCCESS
