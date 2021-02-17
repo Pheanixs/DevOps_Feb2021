@@ -1,0 +1,31 @@
+
+
+
+sudo docker exec -it 78d4ab4e386a bash
+mysql -uroot -pqwerty
+SET GLOBAL local_infile=1;
+
+Connect to Database
+sudo mysql -upheanix -pqwerty -h192.168.7.71 -P3308
+
+
+Choise Database
+use DevOps
+
+
+Create Tables
+
+source students.sql
+source result.sql
+
+
+Past Data
+
+LOAD DATA LOCAL INFILE '/home/pheanix/task5/students.csv' INTO TABLE students FIELDS TERMINATED BY ';' ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES (ID, Student, StudentID);
+LOAD DATA LOCAL INFILE '/home/pheanix/task5/result.csv' INTO TABLE result FIELDS TERMINATED BY ';' ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES (ID, StudentID, Task1, Task2, Task3, Task4);
+
+
+
+Selected Data from database
+
+SELECT students.ID, students.Student, result.Task1, result.Task2, result.Task3, result.Task4 FROM DevOps.students, DevOps.result WHERE students.StudentID=result.StudentID and students.Student='Никольский Валерий Александрович';

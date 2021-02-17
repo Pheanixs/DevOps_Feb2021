@@ -1,0 +1,6 @@
+sudo mysql -upheanix -pP@ssw0rd -h192.168.77.105 -P3308
+
+use DevOps
+
+source students.sql
+source result.sql

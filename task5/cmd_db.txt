@@ -1,0 +1,11 @@
+sudo mysql
+
+SHOW DATABASES;
+
+CREATE DATABASE DevOps;
+
+USE DevOps;
+
+\.students.sql
+\. result.sql
+
