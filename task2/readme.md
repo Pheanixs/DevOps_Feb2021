@@ -53,8 +53,13 @@ Create `docker-compose.yaml` file (task2/t2.5/docker-compose.yaml).
 
 Command and result in file (task2/cmd_t25.txt)
 
+Added a description for each of the repositories
+
 Results:
 ![task25_000.png](https://github.com/Pheanixs/DevOps_Feb2021/blob/master/task2/images/task25_000.png)
 ![task25_001.png](https://github.com/Pheanixs/DevOps_Feb2021/blob/master/task2/images/task25_001.png)
 
+Links to Docker Hub:
 
+`https://hub.docker.com/repository/docker/pheanix/simple-nginx`
+`https://hub.docker.com/repository/docker/pheanix/simple-nginx2`
