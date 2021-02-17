@@ -1,0 +1,35 @@
+pheanix@userv00:~$ sudo docker pull jenkins/jenkins:lts
+lts: Pulling from jenkins/jenkins
+0ecb575e629c: Pull complete
+57cd93315d96: Pull complete
+8f2fb5ba5578: Pull complete
+5df25027d832: Pull complete
+2721a364269e: Pull complete
+b81a9d475179: Pull complete
+84f09918e1fd: Pull complete
+39e6b9a64e2c: Pull complete
+978144699edc: Pull complete
+75e164ae7556: Pull complete
+284ba7d0aa91: Pull complete
+dd9e2842d0a9: Pull complete
+42884ffea68b: Pull complete
+1107f24019e2: Pull complete
+32a343a0ab7c: Pull complete
+fcaf2e003df7: Pull complete
+Digest: sha256:641eeb472ab94bc89e7e6f2e6d337f4c38a934d707a9f02713bbb1227b3a08dd
+Status: Downloaded newer image for jenkins/jenkins:lts
+docker.io/jenkins/jenkins:lts
+
+
+pheanix@userv00:~$ sudo docker images
+REPOSITORY              TAG        IMAGE ID       CREATED         SIZE
+pheanix/simple-nginx2   latest     09dfb832cdc9   7 hours ago     133MB
+pheanix/simple-nginx    latest     810762aecdd2   7 hours ago     133MB
+simple-nginx2           latest     08405862a2ea   7 hours ago     133MB
+simple-nginx            latest     d3fb08f2c826   7 hours ago     133MB
+ghost                   3-alpine   6126164955fa   4 days ago      379MB
+adminer                 latest     b5cb16f3bcbc   6 days ago      89.8MB
+jenkins/jenkins         lts        3f6389c017cc   6 days ago      566MB
+mysql                   latest     2933adc350f3   7 days ago      546MB
+nginx                   1.19.6     298ec0e28760   7 days ago      133MB
+hello-world             latest     bf756fb1ae65   13 months ago   13.3kB
