@@ -4,32 +4,32 @@ services:
     image: pheanix/simple-nginx
     labels:
       description: Has simple web page.
+    ports:
+      - 9980-9990:80
 
   ghost:
     image: ghost:3-alpine
-    deploy:
-      replicas: 5
-      placement:
-        max_replicas_per_node: 1
     restart: always
     ports:
-      - "9997:2368"
+      - 9997:2368
     environment:
       # see https://docs.ghost.org/docs/config#section-running-ghost-with-config-env-variables
-      database__client: mysql
-      database__connection__host: db
-      database__connection__user: root
-      database__connection__password: example
-      database__connection__database: ghost
+      database__client: ${db_client}
+      database__connection__host: ${db_connect_host}
+      database__connection__user: ${db_connect_user}
+      database__connection__password: ${db_connect_pas}
+      database__connection__database: ${db_connect_db}
       # this url value is just an example, and is likely wrong for your environment!
       url: http://192.168.77.100:9997
+    links:
+      - db
 
   db:
     image: mysql
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: example
+      MYSQL_ROOT_PASSWORD: ${mysql_root_pwd}
 
   adminer:
     image: adminer
