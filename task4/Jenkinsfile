@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    stages {
+        stage('DockerCMD') {
+            agent {
+                label "label_agent_Host"
+            }
+            steps {
+            echo 'Docker'
+            sh 'hostname'
+            sh 'docker ps -a'
+            }
+        }
+    }
+}
