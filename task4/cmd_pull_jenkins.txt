@@ -33,3 +33,7 @@ jenkins/jenkins         lts        3f6389c017cc   6 days ago      566MB
 mysql                   latest     2933adc350f3   7 days ago      546MB
 nginx                   1.19.6     298ec0e28760   7 days ago      133MB
 hello-world             latest     bf756fb1ae65   13 months ago   13.3kB
+
+pheanix@userv00:~$ mkdir jenkins
+
+pheanix@userv00:~$ 

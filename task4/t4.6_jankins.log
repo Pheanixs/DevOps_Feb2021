@@ -1,0 +1,80 @@
+Started by user Pheanix Skywalker
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/jenkins_home/workspace/pipe01
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Get Project)
+[Pipeline] node
+Running on agent_Host in /home/pheanix/DocJenk/workspace/pipe01
+[Pipeline] {
+[Pipeline] sh
++ hostname
+userver00
+[Pipeline] git
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+Fetching changes from the remote Git repository
+ > git rev-parse --is-inside-work-tree # timeout=10
+ > git config remote.origin.url https://github.com/Pheanixs/DevOps_Feb2021.git # timeout=10
+Fetching upstream changes from https://github.com/Pheanixs/DevOps_Feb2021.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+ > git fetch --tags --progress -- https://github.com/Pheanixs/DevOps_Feb2021.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Checking out Revision e870d126ec451492dbdb8880b17c37cc292d5dab (refs/remotes/origin/master)
+Commit message: "add html folder for task2.2"
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f e870d126ec451492dbdb8880b17c37cc292d5dab # timeout=10
+ > git branch -a -v --no-abbrev # timeout=10
+ > git branch -D master # timeout=10
+ > git checkout -b master e870d126ec451492dbdb8880b17c37cc292d5dab # timeout=10
+ > git rev-list --no-walk 1198c0468867d8e7bbf8b29484dcd4b9f3a364e5 # timeout=10
+[Pipeline] sh
++ ls -la
+total 56
+drwxrwxr-x 11 pheanix pheanix 4096 Feb 21 18:30 .
+drwxrwxr-x  6 pheanix pheanix 4096 Feb 21 18:29 ..
+drwxrwxr-x  8 pheanix pheanix 4096 Feb 21 18:47 .git
+-rw-rw-r--  1 pheanix pheanix   28 Feb 21 18:30 .gitignore
+-rw-rw-r--  1 pheanix pheanix  423 Feb 21 18:30 DevOps_Feb2021.iml
+-rw-rw-r--  1 pheanix pheanix  857 Feb 21 18:30 readme.md
+drwxrwxr-x  3 pheanix pheanix 4096 Feb 21 18:30 src
+drwxrwxr-x  2 pheanix pheanix 4096 Feb 21 18:30 task1
+drwxrwxr-x  7 pheanix pheanix 4096 Feb 21 18:30 task2
+drwxrwxr-x  5 pheanix pheanix 4096 Feb 21 18:30 task3
+drwxrwxr-x  2 pheanix pheanix 4096 Feb 21 18:30 task4
+drwxrwxr-x  3 pheanix pheanix 4096 Feb 21 18:30 task5
+drwxrwxr-x  2 pheanix pheanix 4096 Feb 21 18:30 task6
+drwxrwxr-x  2 pheanix pheanix 4096 Feb 21 18:30 task7
+[Pipeline] sh
++ docker ps -a
+CONTAINER ID   IMAGE                 COMMAND                  CREATED        STATUS          PORTS                               NAMES
+8d0017431443   jenkinsci/blueocean   "/sbin/tini -- /usr/…"   13 hours ago   Up 24 minutes   50000/tcp, 0.0.0.0:8000->8080/tcp   docjenk_jenkins_1
+98f8a2e361b9   docjenk_docker        "/sbin/tini -- /usr/…"   13 hours ago   Up 24 minutes   8080/tcp, 50000/tcp                 docjenk_docker_1
+[Pipeline] sh
++ ls task2/t2.2 -la
+total 16
+drwxrwxr-x 3 pheanix pheanix 4096 Feb 21 18:47 .
+drwxrwxr-x 7 pheanix pheanix 4096 Feb 21 18:30 ..
+-rw-rw-r-- 1 pheanix pheanix   99 Feb 21 18:47 Dockerfile
+drwxrwxr-x 2 pheanix pheanix 4096 Feb 21 18:34 html
+[Pipeline] sh
++ docker build -f task2/t2.2/Dockerfile .
+Sending build context to Docker daemon   1.18MB
+
+Step 1/2 : FROM nginx:1.19.6
+ ---> 298ec0e28760
+Step 2/2 : COPY task2/t2.2/html/index.html /usr/share/nginx/html
+ ---> 7a8e9b211eb0
+Successfully built 7a8e9b211eb0
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
